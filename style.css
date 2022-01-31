@@ -23,8 +23,48 @@ p {
 
 section {
   padding: 20px;
+  width:100%;
+}
+#about {
+  display:flex;
+  flex-direction:column;
+  width:100%;
+}
+#about img {
+  flex:1;
+  width:100%;
+  margin-bottom:5%;
+}
+#ideas {
+  display:flex;
+  flex-direction:column;
+  width:100%;
 }
 
+#ideas h3 {
+  font-weight:800;
+}
+#ideas img {
+  flex:1;
+  width:100%;
+}
+
+#host {
+  display:flex;
+  flex-direction:column;
+  width:100%;
+ 
+}
+
+#host h2 {
+  width:80%;
+  margin-left:10%;
+}
+
+#host img {
+  flex: 1;
+  width:100%;
+}
 section.alternate-background {
   background-color: #00a699;
   color: #fff;
@@ -50,22 +90,34 @@ main img {
   flex: 2;
 }
 
+
 /* -------  Navigation ------- */
 
 header {
+
   background-color: #ff385c;
   padding: 20px 20px 0 20px;
   text-align: center;
+  width:100%;
+  
 }
 
 .logo {
   font-family: "Pangolin", cursive;
   font-size: 72px;
-  color: #fff;
-}
+  color: #ffffff;
+  width:100%;
 
+  
+}
+header nav ul {
+  display:flex;
+  justify-content: center;
+  padding-bottom:20px;
+}
 header nav ul li {
   list-style-type: none;
+  display:inline;
 }
 
 header nav ul li a {
@@ -81,7 +133,7 @@ header nav ul li a:hover {
 
 /* -------  Search Form ------- */
 form {
-  border: 2px solid #ff385c;
+  border: 2px solid #FF385C;
   padding: 10px;
 }
 
@@ -89,14 +141,18 @@ form label {
   font-weight: bold;
 }
 
-form select,
-form input {
+form div {
+  display: flex;
+  justify-content: space-around;
+}
+
+form select, form input {
   margin-bottom: 20px;
-  width: 180px;
+  width: 60%;
 }
 
 form button {
-  background-color: #ff385c;
+  background-color: #FF385C;
   border: none;
   color: #fff;
   font-size: 24px;
@@ -104,9 +160,12 @@ form button {
   width: 100%;
 }
 
+
 /* -------  Footer ------- */
 
 footer {
+  padding:20px;
+    width:100%;
   background-color: #ff385c;
 }
 
