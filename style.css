@@ -23,55 +23,15 @@ p {
 
 section {
   padding: 20px;
-  width:100%;
-}
-#about {
-  display:flex;
-  flex-direction:column;
-  width:100%;
-}
-#about img {
-  flex:1;
-  width:100%;
-  margin-bottom:5%;
-}
-#ideas {
-  display:flex;
-  flex-direction:column;
-  width:100%;
 }
 
-#ideas h3 {
-  font-weight:800;
-}
-#ideas img {
-  flex:1;
-  width:100%;
-}
-
-#host {
-  display:flex;
-  flex-direction:column;
-  width:100%;
- 
-}
-
-#host h2 {
-  width:80%;
-  margin-left:10%;
-}
-
-#host img {
-  flex: 1;
-  width:100%;
-}
 section.alternate-background {
   background-color: #00a699;
   color: #fff;
 }
 
 main img {
-  width: 100px;
+  width: 100%;
 }
 
 /* ---  Groups & Items --- */
@@ -83,47 +43,44 @@ main img {
 
 .item {
   flex: 1;
-  margin: 10px;
+  margin:10px;
 }
 
-.item-double {
+.double-col {
   flex: 2;
 }
-
 
 /* -------  Navigation ------- */
 
 header {
-
   background-color: #ff385c;
-  padding: 20px 20px 0 20px;
+  padding: 20px 20px 20px 20px;
   text-align: center;
-  width:100%;
-  
 }
 
 .logo {
   font-family: "Pangolin", cursive;
-  font-size: 72px;
-  color: #ffffff;
-  width:100%;
+  font-size: 50px;
+  color: #fff;
+}
 
-  
-}
 header nav ul {
-  display:flex;
+  display: flex;
   justify-content: center;
-  padding-bottom:20px;
 }
+
 header nav ul li {
   list-style-type: none;
-  display:inline;
 }
 
 header nav ul li a {
   color: #fff;
   text-decoration: none;
   padding: 0 20px 0 0;
+}
+
+header nav ul li:last-child a {
+  margin-right: 20px;
 }
 
 header nav ul li a:hover {
@@ -133,7 +90,10 @@ header nav ul li a:hover {
 
 /* -------  Search Form ------- */
 form {
-  border: 2px solid #FF385C;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 2px solid #ff385c;
   padding: 10px;
 }
 
@@ -141,18 +101,15 @@ form label {
   font-weight: bold;
 }
 
-form div {
-  display: flex;
-  justify-content: space-around;
-}
-
-form select, form input {
+form select,
+form input {
   margin-bottom: 20px;
-  width: 60%;
+  width: 65%;
+  float: right;
 }
 
 form button {
-  background-color: #FF385C;
+  background-color: #ff385c;
   border: none;
   color: #fff;
   font-size: 24px;
@@ -160,12 +117,9 @@ form button {
   width: 100%;
 }
 
-
 /* -------  Footer ------- */
 
 footer {
-  padding:20px;
-    width:100%;
   background-color: #ff385c;
 }
 
@@ -176,3 +130,52 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+
+@media all and (min-width: 600px) {
+  header {
+    background-color: #ff385c;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  header nav {
+    padding: 10px;
+  }
+
+  form {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+
+  form .item {
+    display: flex block;
+    flex: 1 1 auto;
+    flex-direction: column;
+  }
+
+ 
+  #ideas .col {
+    display: flex;
+    flex: 1;
+    flex-direction: column; 
+ 
+  }
+
+  .item button {
+    width:100px;
+  }
+  #ideas .row {
+    display: flex;
+    flex: 1;
+    
+  }
+}
